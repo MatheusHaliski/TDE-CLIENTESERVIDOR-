@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ProdutoService } from '../services/produto.service'; // Ajuste o caminho conforme necessário
+import { ProdutoService } from '../services/produto.service'; 
 import Swal from 'sweetalert2';
 @Component({
   selector: 'app-atualizar-animal',
@@ -20,7 +20,7 @@ export class AtualizarAnimalComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.animalId = +this.route.snapshot.params['id']; // Converte para número
+    this.animalId = +this.route.snapshot.params['id']; 
     this.formulario = this.fb.group({
       nome: ['', [Validators.required, Validators.pattern(/^[A-Z][a-zA-Z]*$/)]],
       especie: ['', Validators.required],
@@ -49,7 +49,7 @@ onSubmit(): void {
     this.animalService.updateAnimal(this.animalId, this.formulario.value).subscribe(
       (response) => {
         Swal.fire('Sucesso', 'Animal atualizado com sucesso!', 'success').then(() => {
-          this.router.navigate(['/listapets']); // Redireciona para a lista de pets após a atualização
+          this.router.navigate(['/listapets']); 
         });
       },
       (error) => {
