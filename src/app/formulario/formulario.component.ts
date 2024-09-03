@@ -18,7 +18,7 @@ export class FormularioComponent {
       ],
       especie: [
         '',
-        [Validators.required] // Exemplo de validação obrigatória
+        [Validators.required] 
       ],
       nomedono: [
         '',
@@ -26,7 +26,7 @@ export class FormularioComponent {
       ],
       emaildono: [
         '',
-        [Validators.required, Validators.email] // Validação de e-mail
+        [Validators.required, Validators.email] 
       ]
     });
   }
