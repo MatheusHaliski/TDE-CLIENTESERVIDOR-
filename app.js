@@ -19,7 +19,7 @@ db.connect((err) => {
     console.log('Conectado ao MySQL');
 });
 
-// Rota para inserir dados na tabela "animal"
+
 app.post('/animal', (req, res) => {
     const { nome, especie, nomedono, emaildono } = req.body;
     const query = 'INSERT INTO animal (nome, especie, nomedono, emaildono) VALUES (?,?,?,?)';
@@ -29,16 +29,16 @@ app.post('/animal', (req, res) => {
     });
 });
 
-// Rota para consultar dados da tabela "animal"
+
 app.get('/animal2', (req, res) => {
     const query = 'SELECT * FROM animal';
     db.query(query, (err, results) => {
         if (err) throw err;
-        res.json(results); // Envia os resultados da consulta como resposta
+        res.json(results);
     });
 });
 
-// Rota para atualizar um registro na tabela "animal" pelo ID
+
 app.put('/animal4/:id', (req, res) => {
     const { id } = req.params;
     const { nome, especie, nomedono, emaildono } = req.body;
@@ -53,7 +53,7 @@ app.put('/animal4/:id', (req, res) => {
     });
 });
 
-// Rota para deletar um registro na tabela "animal" pelo ID
+
 app.delete('/animal5/:id', (req, res) => {
     const { id } = req.params;
     const query = 'DELETE FROM animal WHERE id = ?';
