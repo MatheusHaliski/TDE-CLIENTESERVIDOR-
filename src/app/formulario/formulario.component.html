@@ -1,12 +1,11 @@
 <div class="container-fluid d-flex min-vh-100">
-  <!-- Div para a imagem de fundo à esquerda -->
   <div class="image-container d-none d-md-block" 
        style="
          background-image: url('assets/Capturardog.JPG');
          background-size: cover;
          background-position: center;
          background-repeat: no-repeat;
-         width: 70%; /* Ajuste conforme necessário */
+         width: 70%; 
        ">
     <div style="height: 80px; background-color: rgba(255, 255, 255, 0.8);">
       <h3 class="card-title text-center mb-4"
@@ -19,28 +18,27 @@
     </div>
   </div>
   
-  <!-- Div para o formulário -->
+
   <div class="form-container d-flex justify-content-center align-items-center" 
        style="
-         width: 30%; /* Ajuste conforme necessário */
-         padding: 20px; /* Adiciona um padding interno */
+         width: 30%; 
+         padding: 20px; 
        ">
     <div class="card p-4 shadow"
          style="
-           background-color: rgba(255, 255, 255, 0.8); /* Fundo branco transparente */
-           border-radius: 10px; /* Borda arredondada */
-           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra do cartão */
-           max-width: 400px; /* Limita a largura máxima do card */
-           width: 100%; /* Faz o card usar toda a largura disponível */
+           background-color: rgba(255, 255, 255, 0.8); 
+           border-radius: 10px; 
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+           max-width: 400px; 
+           width: 100%; 
          ">
       <h3 class="card-title text-center mb-4"
           style="
-            font-size: 1.5rem; /* Tamanho da fonte maior */
+            font-size: 1.5rem;
             font-weight: bold;
           ">Bem-Vindo ao Hotel Pet Deluxe!</h3>
       <h2 class="text-center" style="font-size: 1.2rem;">Por favor, preencha o formulário de cadastro do Animal</h2>
       <form [formGroup]="formulario" (ngSubmit)="onSubmit()" style="width: 100%;">
-        <!-- Nome -->
         <div class="mb-3">
           <label for="nome" class="form-label"
                  style="
@@ -59,17 +57,16 @@
           </div>
         </div>
 
-        <!-- Espécie -->
         <div class="mb-3">
           <label for="especie" class="form-label"
                  style="
-                   font-size: 1.2rem; /* Tamanho da fonte maior */
-                   font-weight: bold; /* Texto em negrito */
+                   font-size: 1.2rem;
+                   font-weight: bold;
                  ">Espécie</label>
           <select id="especie" formControlName="especie" class="form-select"
                   [ngClass]="{'is-invalid': formulario.get('especie')?.invalid && formulario.get('especie')?.touched}"
                   style="
-                    font-size: 1.1rem; /* Tamanho da fonte maior */
+                    font-size: 1.1rem;
                     text-align: center;
                   ">
             <option value="">Selecione</option>
@@ -82,7 +79,6 @@
           </div>
         </div>
 
-        <!-- Nome Completo do Dono -->
         <div class="mb-3">
           <label for="nomedono" class="form-label"
                  style="
@@ -92,7 +88,7 @@
           <input id="nomedono" formControlName="nomedono" type="text" class="form-control"
                  [ngClass]="{'is-invalid': formulario.get('nomedono')?.invalid && formulario.get('nomedono')?.touched}"
                  style="
-                   font-size: 1.1rem; /* Tamanho da fonte maior */
+                   font-size: 1.1rem;
                    text-align: center;
                  ">
           <div *ngIf="formulario.get('nomedono')?.invalid && formulario.get('nomedono')?.touched" class="invalid-feedback">
@@ -100,18 +96,16 @@
             <div *ngIf="formulario.get('nomedono')?.errors?.['pattern']">O Nome Completo do Dono deve começar com letras maiúsculas.</div>
           </div>
         </div>
-
-        <!-- Email do Dono -->
         <div class="mb-3">
           <label for="emaildono" class="form-label"
                  style="
-                   font-size: 1.2rem; /* Tamanho da fonte maior */
-                   font-weight: bold; /* Texto em negrito */
+                   font-size: 1.2rem;
+                   font-weight: bold;
                  ">Email do Dono:</label>
           <input id="emaildono" formControlName="emaildono" type="text" class="form-control"
                  [ngClass]="{'is-invalid': formulario.get('emaildono')?.invalid && formulario.get('emaildono')?.touched}"
                  style="
-                   font-size: 1.1rem; /* Tamanho da fonte maior */
+                   font-size: 1.1rem; 
                    text-align: center;
                  ">
           <div *ngIf="formulario.get('emaildono')?.invalid && formulario.get('emaildono')?.touched" class="invalid-feedback">
@@ -122,10 +116,10 @@
 
         <button type="submit" class="btn btn-primary w-100"
                 style="
-                  font-size: 1.2rem; /* Tamanho da fonte maior */
-                  font-weight: bold; /* Texto em negrito */
-                  padding: 0.75rem; /* Padding do botão */
-                  margin-top: 1rem; /* Espaçamento entre botões */
+                  font-size: 1.2rem;
+                  font-weight: bold;
+                  padding: 0.75rem;
+                  margin-top: 1rem;
                 ">Enviar</button>
       </form>
     </div>
