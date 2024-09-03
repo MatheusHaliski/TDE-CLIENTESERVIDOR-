@@ -1,0 +1,30 @@
+<div class="container">
+    <h2 class="text-center my-4">Lista de Animais</h2>
+    
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Espécie</th>
+          <th>Nome do Dono</th>
+          <th>Email do Dono</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let animalu of animal">
+          <td>{{ animalu.id }}</td>
+          <td>{{ animalu.nome }}</td>
+          <td>{{ animalu.especie }}</td>
+          <td>{{ animalu.nomedono }}</td>
+          <td>{{ animalu.emaildono }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm me-2" (click)="atualizarAnimal(animalu.id)">Atualizar</button>
+            <button class="btn btn-danger btn-sm" (click)="deletarAnimal(animalu.id)">Deletar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

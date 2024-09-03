@@ -1,0 +1,52 @@
+.full-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('assets//Capturardog.JPG'); /* Substitua pelo caminho da sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .card {
+    width: 400px;
+    background-color: rgba(202, 179, 179, 0.8); /* Fundo branco transparente */
+    border-radius: 10px; /* Borda arredondada */
+    padding: 20px;
+    position: relative;
+    border-radius: 10px; /* Borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra do cartão */
+  }
+  
+  .card-title {
+    font-size: 1.5rem; /* Tamanho da fonte maior */
+    font-weight: bold;
+    text-align: center;
+    font-family: Arial, sans-serif; /* Fonte Arial */
+    color: #333; /* Cor do texto */
+  }
+  
+  .form-label {
+    font-size: 1.2rem; /* Tamanho da fonte maior */
+    font-family: Arial, sans-serif; /* Fonte Arial */
+    color: #555; /* Cor do texto */
+  }
+  
+  .form-control {
+    font-size: 1.1rem; /* Tamanho da fonte maior */
+    font-family: Arial, sans-serif; /* Fonte Arial */
+    border: 1px solid #ccc; /* Borda dos campos */
+    border-radius: 5px; /* Borda arredondada dos campos */
+    padding: 10px; /* Padding interno dos campos */
+  }
+  
+  .btn-primary {
+    font-size: 1.2rem; /* Tamanho da fonte maior */
+    padding: 0.75rem; /* Padding do botão */
+    background-color: #007bff; /* Cor de fundo do botão */
+    border-color: #007bff; /* Cor da borda do botão */
+    color: #fff; /* Cor do texto do botão */
+    border-radius: 5px; /* Borda arredondada do botão */
+  }
+  
