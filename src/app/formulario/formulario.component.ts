@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ProdutoService } from '../services/produto.service'; // Ajuste o caminho conforme necessário
+import { ProdutoService } from '../services/produto.service'; 
 import Swal from 'sweetalert2';
 
 @Component({
@@ -14,7 +14,7 @@ export class FormularioComponent {
     this.formulario = this.fb.group({
       nome: [
         '',
-        [Validators.required, Validators.pattern(/^[A-Z][a-z]+$/)] // Apenas letras, primeira maiúscula
+        [Validators.required, Validators.pattern(/^[A-Z][a-z]+$/)] 
       ],
       especie: [
         '',
@@ -22,7 +22,7 @@ export class FormularioComponent {
       ],
       nomedono: [
         '',
-        [Validators.required, Validators.pattern(/^[A-Z][a-zA-Z]*(\s[A-Z][a-zA-Z]*)*$/)] // Cada nome com inicial maiúscula
+        [Validators.required, Validators.pattern(/^[A-Z][a-zA-Z]*(\s[A-Z][a-zA-Z]*)*$/)]
       ],
       emaildono: [
         '',
