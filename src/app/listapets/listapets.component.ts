@@ -50,7 +50,7 @@ export class ListapetsComponent implements OnInit {
               'O animal foi deletado com sucesso.',
               'success'
             );
-            this.carregarAnimais(); // Recarrega a lista após a exclusão
+            this.carregarAnimais(); 
           },
           error => {
             console.error('Erro ao deletar o animal:', error);
